@@ -8,12 +8,12 @@ const structjson=require('./structjson');
 const projectID=config.googleProjectID;
 
 const credentials={
-    client_Email:config.googleClientEmail,
-    private_key: config.googlePrivateKey
+    client_email:config.googleClientEmail,
+    private_key: config.googlePrivateKey 
 
 }
 
-const sessionClient = new dialogflow.SessionsClient({projectID , credentials});
+const sessionClient = new dialogflow.SessionsClient({projectID :projectID, credentials : credentials});
 const sessionPath = sessionClient.sessionPath(projectID, config.dialogFlowSessionID);
 
 
